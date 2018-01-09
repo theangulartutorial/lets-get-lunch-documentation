@@ -12,5 +12,13 @@ var fs = require('fs');
 module.exports =
   '# Introduction\n' +
   fs.readFileSync('./content/introduction.md', 'utf8') + '\n' +
-  '# Example\n' +
-  fs.readFileSync('./content/example.md', 'utf8') + '\n';
+  '# Users\n' +
+  fs.readFileSync('./content/users.md', 'utf8') + '\n' +
+  '# Sessions\n' +
+  fs.readFileSync('./content/sessions.md', 'utf8') + '\n' +
+  '# Events\n' +
+  fs.readFileSync('./content/events.md', 'utf8') + '\n' +
+  '# Comments\n' +
+  fs.readFileSync('./content/comments.md', 'utf8') + '\n' +
+  '# Recommendations\n' +
+  fs.readFileSync('./content/recommendations.md', 'utf8') + '\n';

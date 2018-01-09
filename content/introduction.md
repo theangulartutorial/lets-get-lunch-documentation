@@ -1,6 +1,5 @@
-## Our API
+## Let's Get Lunch API
 
-Welcome to coolcorp biz! This is our API documentation. This documentation
-is generated from normal Markdown files using [docbox](https://github.com/tmcw/docbox),
-so it can use Markdown syntax, like **bold**, *emphasis*, ~~strikethrough~~,
-`code`, and more.
+Welcome to the Let's Get Lunch API! This is our API documentation.
+
+This documentation will serve as a reference for you as you work your way through the book creating all of the services that integrate with the API.
