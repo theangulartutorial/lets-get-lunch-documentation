@@ -4,6 +4,12 @@
 
 Creates a new comment for an event.
 
+Property | Description
+---|---
+`_creator` | id of the comment creator
+`_event` | id of the event
+`content` | comment text
+
 ```endpoint
 POST /api/comments
 ```
@@ -23,12 +29,6 @@ POST /api/comments
   "content": "My first comment"
 }
 ```
-
-Property | Description
----|---
-`_creator` | id of the comment creator
-`_event` | id of the event
-`content` | comment text
 
 #### Example response
 
@@ -70,3 +70,11 @@ GET /api/comments/event/{id}
   }
 ]
 ```
+
+### Comment Errors
+
+On error, the server responds with different HTTP status codes. For status codes lower than `500`, the JSON response body includes a `message` property with a human-readable explanation of the error. If a server error occurs, the HTTP status code will be `500` or higher.
+
+HTTP Status Code | Error Message | Description
+---|---|---
+`204` | `No comments exist for this event.` | No comments exist for the requested event

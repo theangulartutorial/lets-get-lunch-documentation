@@ -4,6 +4,17 @@
 
 Creates a new event.
 
+Property | Description
+---|---
+`_creator` | id of the event creator
+`title` | title for the event
+`description` | (optional) description for the event
+`city` | city for the event
+`state`| state for the event
+`startTime` | start time for the event
+`endTime` | end time for the event
+`suggestLocations` | (optional - default: false) option to provide restaurant recommendations for an event
+
 ```endpoint
 POST /api/events
 ```
@@ -28,17 +39,6 @@ POST /api/events
   "suggestLocations": true,
 }
 ```
-
-Property | Description
----|---
-`_creator` | id of the event creator
-`title` | title for the event
-`description` | (optional) description for the event
-`city` | city for the event
-`state`| state for the event
-`startTime` | start time for the event
-`endTime` | end time for the event
-`suggestLocations` | (optional - default: false) option to provide restaurant recommendations for an event
 
 #### Example response
 
@@ -280,3 +280,12 @@ PATCH /api/events/{id}/subscribe
   ]
 }
 ```
+
+### Event Errors
+
+On error, the server responds with different HTTP status codes. For status codes lower than `500`, the JSON response body includes a `message` property with a human-readable explanation of the error. If a server error occurs, the HTTP status code will be `500` or higher.
+
+HTTP Status Code | Error Message | Description
+---|---|---
+`404` | `This event does not exist.` | The requested event does not exist
+`204` | `This user is not a member of any events.` | The requested user is not subscribed to any events
