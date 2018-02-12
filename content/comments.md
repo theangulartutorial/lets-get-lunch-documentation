@@ -83,4 +83,5 @@ On error, the server responds with different HTTP status codes. The JSON respons
 
 Endpoint | HTTP Status Code | Error Message | Description
 |---|---|---|---
-POST /api/comments | `500` | `Comment could not be created!` | A server error occurred
+`POST /api/comments` | `500` | `Comment could not be created!` | A server error occurred
+`POST /api/comments/event/{id}` | `500` | `Something went wrong!` | A server error occurred
