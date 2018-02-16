@@ -296,3 +296,5 @@ Endpoint | HTTP Status Code | Error Message | Description
 `POST /api/events` | `500` | `Event could not be created!` | The event could not be created
 `GET /api/events/{id}` | `404` | `This event does not exist.` | The requested event does not exist
 `GET /api/events/user/{id}` | `500` | `Something went wrong!` | A server error occurred
+`GET /api/events` | `500` | `Something went wrong!` | A server error occurred
+`PATCH /api/events/{id}/subscribe` | `500` | `Something went wrong. Try again.` | A server error occurred
