@@ -70,3 +70,11 @@ GET /api/recommendations/{id}
   ]
 }
 ```
+
+### Recommendations Errors
+
+On error, the server responds with different HTTP status codes. The JSON response body includes a `message` property with a human-readable explanation of the error. If a server error occurs, the HTTP status code will be `500` or higher.
+
+Endpoint | HTTP Status Code | Error Message | Description
+|---|---|---|---
+`GET /api/recommendations/{id}` | `500` | `Something went wrong!` | A server error occurred
