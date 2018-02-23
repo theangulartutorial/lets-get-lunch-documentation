@@ -192,6 +192,7 @@ PATCH /api/events/{id}
 
 ```javascript
 {
+  '_id': '5a55135639fbc4ca3ee0ce5a',
   '_creator': '5a550ea739fbc4ca3ee0ce58',
   'title': 'My first updated event',
   'description': 'My first updated description',
@@ -297,4 +298,5 @@ Endpoint | HTTP Status Code | Error Message | Description
 `GET /api/events/{id}` | `404` | `This event does not exist.` | The requested event does not exist
 `GET /api/events/user/{id}` | `500` | `Something went wrong!` | A server error occurred
 `GET /api/events` | `500` | `Something went wrong!` | A server error occurred
+`PATCH /api/events/{id}` | `500` | `Event could not be updated!` | A server error occurred
 `PATCH /api/events/{id}/subscribe` | `500` | `Something went wrong. Try again.` | A server error occurred
